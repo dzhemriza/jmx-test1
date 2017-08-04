@@ -1,0 +1,22 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    testCompile "junit:junit:4.12"
+}
+
+jar {
+    baseName = 'jmx-test1'
+    version = '0.0.1'
+    manifest {
+        attributes 'Implementation-Title': 'JMX Experiment',
+                'Implementation-Version': version,
+                'Main-Class': 'org.jmx.example.Main'
+    }
+}
